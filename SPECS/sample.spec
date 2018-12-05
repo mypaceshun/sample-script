@@ -24,19 +24,22 @@ rm -rf %{buildroot}
 %setup
 %patch0 -p1
 %patch1 -p1
-exit 1
 
 %build
 echo =====build=====
+make
 
 %install
 echo =====install=====
+make install DESTDIR=%{buildroot} BINDIR=%{_bindir}
 
 %check
 echo =====check=====
+make check DESTDIR=%{buildroot} BINDIR=%{_bindir}
 
 %clean
 echo =====clean=====
+make clean
 
 %post
 echo =====post=====
@@ -63,6 +66,7 @@ echo =====triggerpostun=====
 echo =====verifyscript=====
 
 %files
+%attr(0755,root,root) %{_bindir}/sample
 %doc
 
 %changelog
