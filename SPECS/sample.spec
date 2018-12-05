@@ -6,7 +6,8 @@ License:	MIT
 
 Source0:        sample-script-1.0.tar.gz
 
-Patch0:         addmessage.patch
+Patch0:         sample-patch01.patch
+Patch1:         sample-patch02.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -22,6 +23,7 @@ echo =====prep=====
 rm -rf %{buildroot}
 %setup
 %patch0 -p1
+%patch1 -p1
 exit 1
 
 %build

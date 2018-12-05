@@ -11,7 +11,6 @@ usage:
 .PHONY: bp bc bi bb bs
 bp bc bi bb bs: deploy
 	rpmbuild -v -$@ SPECS/sample.spec
-	#rpmbuild -v --define="_topdir `pwd`" -$@ SPECS/sample.spec
 
 .PHONY: rpm
 rpm: deploy
@@ -23,6 +22,5 @@ clean:
 
 .PHONY: deploy
 deploy:
-	@tar zcf sample.tar.gz sample
 	@tar zcf sample-script-1.0.tar.gz sample-script-1.0
 	@mv -v *.tar.gz SOURCES/

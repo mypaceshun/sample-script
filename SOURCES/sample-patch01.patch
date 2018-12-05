@@ -1,0 +1,12 @@
+diff --git a/sample-script-1.0/sample.c b/sample-script-1.0/sample.c
+index 2ebc8e6..e82505f 100644
+--- a/sample.c
++++ b/sample.c
+@@ -1,6 +1,6 @@
+ #include <stdio.h>
+ 
+ int main() {
+-        printf("sample program!\n");
++        printf("サンプルプログラムだよ！\n");
+         return 0;
+ }
