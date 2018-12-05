@@ -4,7 +4,9 @@ Release:	1%{?dist}
 Summary:	sample script
 License:	MIT
 
-Source0:        sample.tar.gz
+Source0:        sample-script-1.0.tar.gz
+
+Patch0:         addmessage.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
@@ -16,8 +18,11 @@ script
 
 
 %prep
-rm -rf %{buildroot}
 echo =====prep=====
+rm -rf %{buildroot}
+%setup
+%patch0 -p1
+exit 1
 
 %build
 echo =====build=====

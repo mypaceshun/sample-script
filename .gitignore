@@ -1,4 +1,4 @@
-SOURCES/sample.tar.gz
+SOURCES/*.tar.gz
 BUILD
 BUILDROOT
 SRPMS
