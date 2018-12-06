@@ -10,7 +10,7 @@ usage:
 
 .PHONY: bp bc bi bb bs
 bp bc bi bb bs: deploy
-	rpmbuild -v -$@ SPECS/sample.spec
+	rpmbuild -v --define="_topdir `pwd`" -$@ SPECS/sample.spec
 
 .PHONY: rpm
 rpm: deploy
