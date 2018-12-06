@@ -10,7 +10,7 @@ install: sample
 	install -d -m 0755 ${DESTDIR}${BINDIR}
 	install -m 0755 sample ${DESTDIR}${BINDIR}/
 	install -d -m 0755 ${DESTDIR}${CONFDIR}/sample
-	install -m 0644 sample.cnof ${DESTDIR}${CONFDIR}/sample/sample.conf
+	install -m 0644 sample.conf ${DESTDIR}${CONFDIR}/sample/sample.conf
 
 .PHONY: check
 check:

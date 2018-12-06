@@ -29,11 +29,11 @@ make
 
 %install
 echo =====install=====
-make install DESTDIR=%{buildroot} BINDIR=%{_bindir} CONFDIR=%{_confdir}
+make install DESTDIR=%{buildroot} BINDIR=%{_bindir} CONFDIR=%{_sysconfdir}
 
 %check
 echo =====check=====
-make check DESTDIR=%{buildroot} BINDIR=%{_bindir} CONDFIR=%{_confdir}
+make check DESTDIR=%{buildroot} BINDIR=%{_bindir} CONDFIR=%{_sysconfdir}
 
 %clean
 echo =====clean=====
@@ -65,8 +65,9 @@ echo =====verifyscript=====
 
 %files
 %attr(0755,root,root) %{_bindir}/sample
-%config(noreplace) %{_confdir}/sample/sample.conf
+%config(noreplace) %{_sysconfdir}/sample/sample.conf
 %doc README.md
 
 %changelog
-
+* Thu Dec 06 2018 KAWAI Shun <shun at osstech.co.jp> - 1.0-1
+- first release
