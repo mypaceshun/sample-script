@@ -11,8 +11,6 @@ Patch1:         sample-patch02.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
-BuildRequires:  tree
-
 %description
 sample
 script
@@ -31,11 +29,11 @@ make
 
 %install
 echo =====install=====
-make install DESTDIR=%{buildroot} BINDIR=%{_bindir}
+make install DESTDIR=%{buildroot} BINDIR=%{_bindir} CONFDIR=%{_confdir}
 
 %check
 echo =====check=====
-make check DESTDIR=%{buildroot} BINDIR=%{_bindir}
+make check DESTDIR=%{buildroot} BINDIR=%{_bindir} CONDFIR=%{_confdir}
 
 %clean
 echo =====clean=====
@@ -67,6 +65,7 @@ echo =====verifyscript=====
 
 %files
 %attr(0755,root,root) %{_bindir}/sample
+%config(noreplace) %{_confdir}/sample/sample.conf
 %doc README.md
 
 %changelog
