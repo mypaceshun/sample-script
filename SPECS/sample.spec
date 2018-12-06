@@ -1,6 +1,6 @@
 Name:		sample-script
 Version:	1.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	sample script
 License:	MIT
 
@@ -69,5 +69,8 @@ echo =====verifyscript=====
 %doc README.md
 
 %changelog
+* Thu Dec 06 2018 KAWAI Shun <shun at osstech.co.jp> - 1.0-2
+- add new settings
+
 * Thu Dec 06 2018 KAWAI Shun <shun at osstech.co.jp> - 1.0-1
 - first release

@@ -19,6 +19,7 @@ rpm: deploy
 .PHONY: clean
 clean:
 	rm -rf BUILD BUILDROOT RPMS SRPMS
+	rm -rf SOURCES/*.tar.gz
 
 .PHONY: deploy
 deploy:
