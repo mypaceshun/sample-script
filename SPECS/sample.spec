@@ -67,7 +67,7 @@ echo =====verifyscript=====
 
 %files
 %attr(0755,root,root) %{_bindir}/sample
-%doc
+%doc README.md
 
 %changelog
 
